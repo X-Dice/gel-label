@@ -1,0 +1,11 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+const html=await readFile('dist/GelLabel-offline.html','utf8');
+if(/<script[^>]+src\s*=|<link[^>]+rel=["']stylesheet/.test(html))throw new Error('External application resource in offline build');
+if(/@import\s|url\(\s*["']?https?:/i.test(html))throw new Error('External CSS resource in offline build');
+const scripts=[...html.matchAll(/<script type="module">([\s\S]*?)<\/script>/g)];
+if(scripts.length!==1)throw new Error('Expected one self-contained script');
+await mkdir('work',{recursive:true});await writeFile('work/offline-check.mjs',scripts[0][1]);
+const result=spawnSync(process.execPath,['--check','work/offline-check.mjs'],{encoding:'utf8'});
+if(result.status!==0)throw new Error(result.stderr);
+console.log('Offline package: one embedded script, embedded CSS, valid JavaScript syntax, no external application resources.');

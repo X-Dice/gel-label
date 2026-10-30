@@ -1,0 +1,54 @@
+name: Publish preview release
+on:
+  push:
+    branches: [main]
+    paths: [package.json, .github/workflows/release.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run package
+      - name: Publish v0.1.0 preview and offline download
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const version = JSON.parse(fs.readFileSync('package.json', 'utf8')).version;
+            const tag = `v${version}`;
+            const { owner, repo } = context.repo;
+            let release;
+            try {
+              release = (await github.rest.repos.getReleaseByTag({ owner, repo, tag })).data;
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              release = (await github.rest.repos.createRelease({
+                owner, repo, tag_name: tag, target_commitish: context.sha,
+                name: `GelLabel ${tag} — initial preview`, prerelease: true,
+                body: fs.readFileSync('docs/RELEASE_NOTES.md', 'utf8')
+              })).data;
+            }
+            for (const filename of ['GelLabel-offline.html', 'SHA256SUMS.txt']) {
+              const data = fs.readFileSync(`release/${filename}`);
+              const prior = release.assets.find(asset => asset.name === filename);
+              // Never replace an already-published release asset silently.
+              if (prior) { core.info(`Preserving existing asset: ${filename}`); continue; }
+              await github.rest.repos.uploadReleaseAsset({
+                owner, repo, release_id: release.id, name: filename,
+                headers: { 'content-type': filename.endsWith('.html') ? 'text/html' : 'text/plain', 'content-length': data.length },
+                data
+              });
+            }
+            core.notice(`Preview release: ${release.html_url}`);

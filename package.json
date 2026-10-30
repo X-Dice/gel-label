@@ -1,0 +1,27 @@
+{
+  "name": "gel-label",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Label gel images in your browser. No installation, no uploads.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "build": "npm run check && vite build && node scripts/offline.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "examples": "tsx scripts/examples.ts",
+    "package": "npm run build && node scripts/verify-package.mjs && node scripts/package.mjs",
+    "publish:github": "bash scripts/publish.sh"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^24.0.0",
+    "@types/pngjs": "^6.0.5",
+    "pngjs": "^7.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.12"
+  }
+}

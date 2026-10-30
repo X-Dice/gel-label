@@ -2,13 +2,13 @@
 
 **在浏览器里给电泳胶图加标注。免安装，不上传文件。**
 
-[English](README.md) · [下载离线版](GelLabel-offline.html) · [贡献指南](CONTRIBUTING.md)
+[English](README.md) · [下载离线版](https://github.com/X-Dice/gel-label/releases/download/v0.1.0/GelLabel-offline.html) · [贡献指南](CONTRIBUTING.md)
 
 ![GelLabel 导出的模拟胶图，非真实实验数据](docs/export-example.png)
 
 把 Excel 中的一列泳道名称粘贴进来，拖到合适的位置，再导出配图。适合学生、iGEM 队伍和实验室新人。
 
-> 当前为 v0.1.0 预览版；真实浏览器操作、在线演示部署和发布下载尚未验证。见[验证记录](docs/VERIFICATION.md)。
+> [v0.1.0 预览版](https://github.com/X-Dice/gel-label/releases/tag/v0.1.0)已发布，GitHub 自动检查已通过，下载文件已通过校验并与本地构建一致。在线演示等待启用 GitHub Pages；真实浏览器操作仍待验证。见[验证记录](docs/VERIFICATION.md)。
 
 ## 三步使用
 

@@ -1,6 +1,6 @@
 # Share drafts — use after publishing and verifying the demo
 
-These drafts have not been posted. Replace `<DEMO_URL>` and `<REPOSITORY_URL>` with verified links before use. Do not claim browser testing is complete until it is.
+These drafts have not been posted. Replace `<DEMO_URL>` and `https://github.com/X-Dice/gel-label` with verified links before use. Do not claim browser testing is complete until it is.
 
 ## English
 
@@ -11,7 +11,7 @@ Paste a column of lane names from Excel, move them into place, add arrows or gro
 It doesn't quantify bands or edit the image pixels — it focuses on making the labeling step easier.
 
 Try it: <DEMO_URL>
-Code: <REPOSITORY_URL>
+Code: https://github.com/X-Dice/gel-label
 
 If you work with gel images, I'd like to know what would make it more useful. A star is welcome if it saves you some time.
 
@@ -24,6 +24,6 @@ If you work with gel images, I'd like to know what would make it more useful. A 
 它不做条带定量，也不修图，主要是想让标注和排版方便一点。
 
 试用：<DEMO_URL>
-源码：<REPOSITORY_URL>
+源码：https://github.com/X-Dice/gel-label
 
 如果你平时也需要标注胶图，欢迎试用和提建议。觉得有用的话，也欢迎给一个 Star。

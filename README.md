@@ -1,17 +1,17 @@
 <p align="center"><strong>G E L L A B E L</strong></p>
 <h1 align="center">From gel to figure.</h1>
 <p align="center">Label gel images in your browser. No installation. No uploads.</p>
-<p align="center"><a href="README.zh-CN.md">简体中文</a> · <a href="GelLabel-offline.html">Offline app</a> · <a href="#quick-start">Quick start</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
+<p align="center"><a href="README.zh-CN.md">简体中文</a> · <a href="https://github.com/X-Dice/gel-label/releases/download/v0.1.0/GelLabel-offline.html">Download offline app</a> · <a href="https://github.com/X-Dice/gel-label/releases/tag/v0.1.0">v0.1.0 preview</a> · <a href="#quick-start">Quick start</a> · <a href="CONTRIBUTING.md">Contribute</a></p>
 
 ![Example figure exported by GelLabel. This is synthetic data.](docs/export-example.png)
 
 **Paste a column of lane names from Excel, drag them into place, and export a figure you can still edit.** GelLabel is a small, free tool for students, iGEM teams, and anyone labeling their next gel image.
 
-> This is the v0.1.0 preview. Browser acceptance, live demo deployment, and release downloads are **not yet verified**. See [verification status](docs/VERIFICATION.md).
+> The [v0.1.0 preview](https://github.com/X-Dice/gel-label/releases/tag/v0.1.0) is published. GitHub checks passed, and the downloaded release asset matches its checksum and the local build. The live demo awaits GitHub Pages activation; real browser acceptance remains pending. See [verification status](docs/VERIFICATION.md).
 
 ## Quick start
 
-1. Download [`GelLabel-offline.html`](GelLabel-offline.html) and open it in a modern desktop browser. No server or installation is needed. If viewing on GitHub, use **Download raw file**.
+1. Download [`GelLabel-offline.html`](https://github.com/X-Dice/gel-label/releases/download/v0.1.0/GelLabel-offline.html) and open it in a modern desktop browser. No server or installation is needed. If viewing on GitHub, use **Download raw file**.
 2. Use **Try sample**, or open a PNG, JPEG, or WebP. Paste one lane name per line and click **Apply labels**.
 3. Drag labels, add arrows or group brackets, then export **PNG**, **SVG**, or **Save project** to keep editing later.
 

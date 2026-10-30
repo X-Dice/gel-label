@@ -1,6 +1,6 @@
 # Publishing notes
 
-The user created the public `X-Dice/gel-label` repository. Source publication is being prepared through the GitHub connector. `scripts/publish.sh` is provided for a future authorized publishing session; it has not been executed against GitHub. It cannot bypass browser permissions or a missing CLI login.
+The user created the public `X-Dice/gel-label` repository. Source publication succeeded through the GitHub connector; v0.1.0 was published by the included release workflow. Pages is awaiting activation. `scripts/publish.sh` is provided for a future authorized publishing session; it has not been executed against GitHub. It cannot bypass browser permissions or a missing CLI login.
 
 ## Prepared metadata
 

@@ -2,17 +2,17 @@
 
 **在浏览器里给电泳胶图加标注。免安装，不上传文件。**
 
-[English](README.md) · [下载离线版](https://github.com/X-Dice/gel-label/releases/download/v0.1.0/GelLabel-offline.html) · [贡献指南](CONTRIBUTING.md)
+[在线试用](https://x-dice.github.io/gel-label/) · [English](README.md) · [下载离线版](https://github.com/X-Dice/gel-label/releases/download/v0.1.0/GelLabel-offline.html) · [贡献指南](CONTRIBUTING.md)
 
 ![GelLabel 导出的模拟胶图，非真实实验数据](docs/export-example.png)
 
 把 Excel 中的一列泳道名称粘贴进来，拖到合适的位置，再导出配图。适合学生、iGEM 队伍和实验室新人。
 
-> [v0.1.0 预览版](https://github.com/X-Dice/gel-label/releases/tag/v0.1.0)已发布，GitHub 自动检查已通过，下载文件已通过校验并与本地构建一致。在线演示等待启用 GitHub Pages；真实浏览器操作仍待验证。见[验证记录](docs/VERIFICATION.md)。
+> [v0.1.0 预览版](https://github.com/X-Dice/gel-label/releases/tag/v0.1.0)已发布，GitHub 自动检查已通过，下载文件已通过校验并与本地构建一致。在线演示已通过 GitHub Pages 部署；真实浏览器操作仍待验证。见[验证记录](docs/VERIFICATION.md)。
 
 ## 三步使用
 
-1. 下载 `GelLabel-offline.html`，用现代桌面浏览器打开。在 GitHub 文件页可点 **Download raw file**。无需安装或启动服务。
+1. 打开[在线演示](https://x-dice.github.io/gel-label/)，或下载 `GelLabel-offline.html` 后用现代桌面浏览器打开。无需安装。
 2. 点击“试用示例”或打开 PNG、JPEG、WebP。每行粘贴一个泳道名称，再点“应用标签”。
 3. 拖动调整位置，添加文字、箭头、分组括号或手动输入的条带大小，然后导出 PNG、SVG，或保存 JSON 项目继续编辑。
 

@@ -1,6 +1,6 @@
 # Publishing notes
 
-The user created the public `X-Dice/gel-label` repository. Source publication succeeded through the GitHub connector; v0.1.0 was published by the included release workflow. Pages is awaiting activation. `scripts/publish.sh` is provided for a future authorized publishing session; it has not been executed against GitHub. It cannot bypass browser permissions or a missing CLI login.
+The user created the public `X-Dice/gel-label` repository. Source publication succeeded through the GitHub connector; v0.1.0 was published by the included release workflow. Pages was enabled by the user and successfully deployed: https://x-dice.github.io/gel-label/ . `scripts/publish.sh` is provided for a future authorized publishing session; it has not been executed against GitHub. It cannot bypass browser permissions or a missing CLI login.
 
 ## Prepared metadata
 
@@ -39,4 +39,4 @@ Official references: [repository creation](https://cli.github.com/manual/gh_repo
 
 ## Release automation
 
-The included `Publish preview release` workflow runs checks and publishes the package version as a prerelease when `package.json` or the release workflow is pushed to main. Existing release assets are preserved. Pages still needs to be enabled in repository settings with GitHub Actions as its source.
+The included `Publish preview release` workflow runs checks and publishes the package version as a prerelease when `package.json` or the release workflow is pushed to main. Existing release assets are preserved. Pages is now enabled with GitHub Actions as its source. Future pushes to main deploy automatically.
